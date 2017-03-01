@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<!--
+	欢迎体验HBuilder，最快的web编码工具。
+	烈马是需要驯服的，玩不转HBuilder，你快不了。
+	按照lessson1.txt的指导敲击键盘，你会发现HBuilder的神奇所在。
+	你可以用任何其他工具敲这段代码，至少比HBuilder慢5倍!
+	写几十行代码，来一场无鼠标编程之旅，看看who is e。
+	Are you ready?
+	小贴士：可以把lesson1.txt拖到右边或下边，实现分窗格并排浏览。
+	在注释后的第12行开始敲下lesson1里的按键。
+-->
+
+<html>
+
+	<head>
+		<title>这是一个工程</title>
+		<meta charset="UTF-8" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="test.css" />
+		<script type="text/javascript" src="test.js"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<style>
+			h2 {
+				color: greenyellow
+			}
+			
+			#para1 {
+				color: #ADFF2F;
+				font-family: "bookman old style";
+			}
+			
+			.center {
+				text-align: center;
+				color: red;
+			}
+			
+			p.centerA {
+				text-align: center;
+				text-decoration: line-through;
+				color: green;
+				line-height: 500%;
+			}
+			
+			p.uppercase {
+				text-transform: uppercase;
+				letter-spacing: -3px;
+				word-spacing: 10px;
+				text-shadow: 5px -3px #008000;
+			}
+			
+			p.lowercase {
+				text-transform: lowercase;
+				letter-spacing: 5px;
+				font-style: italic;
+				font-size: 1.875em;
+				font-weight: 900;
+			}
+			/* 30px/16=1.875em */
+			
+			p.capitalize {
+				text-transform: capitalize;
+				text-indent: 50px;
+				font-size: 200%;
+				font-weight: bold;
+			}
+			
+			p.ex1 {
+				font: italic bold 12px/30px georgia, serif;
+			}
+			
+			img.bottom {
+				vertical-align: text-bottom;
+			}
+			
+			img.top {
+				vertical-align: text-top;
+			}
+			/*当设置为若干链路状态的样式，也有一些顺序规则：
+				a:hover 必须跟在 a:link 和 a:visited后面
+				a:active 必须跟在 a:hover后面
+				*/
+			
+			a:link {
+				color: red;
+			}
+			
+			a:visited {
+				color: orange;
+			}
+			
+			a:hover {
+				color: yellow;
+			}
+			
+			a:active {
+				color: green;
+			}
+			
+			a.one:link {
+				color: #ff0000;
+			}
+			
+			a.one:visited {
+				color: #0000ff;
+			}
+			
+			a.one:hover {
+				color: #ffcc00;
+			}
+			
+			a.two:link {
+				color: #ff0000;
+			}
+			
+			a.two:visited {
+				color: #0000ff;
+			}
+			
+			a.two:hover {
+				font-size: 150%;
+			}
+			
+			a.three:link {
+				color: #ff0000;
+			}
+			
+			a.three:visited {
+				color: #0000ff;
+			}
+			
+			a.three:hover {
+				background: #66ff66;
+			}
+			
+			a.four:link {
+				color: #ff0000;
+			}
+			
+			a.four:visited {
+				color: #0000ff;
+			}
+			
+			a.four:hover {
+				font-family: monospace;
+			}
+			
+			a.five:link {
+				color: #ff0000;
+				text-decoration: none;
+			}
+			
+			a.five:visited {
+				color: #0000ff;
+				text-decoration: none;
+			}
+			
+			a.five:hover {
+				text-decoration: underline;
+			}
+			
+			ul {
+				list-style-image: url(img/Hbu.png);
+			}
+			
+			p>i:first-child {
+				color: #ADFF2F;
+			}
+			
+			q:lang(no) {
+				quotes: "~" "~";
+			}
+		</style>
+		<script type="text/javascript">
+			function showDate() {
+				document.getElementById("showDateDemo").innerHTML = Date();
+			}
+
+			function showString() {
+				str = document.getElementById("showDateDemo");
+				str.innerHTML = "这个地方将要显示日期";
+			}
+
+			function changeStyle() {
+				str = document.getElementById("showDateDemo");
+				str.style.color = "#3E8E41";
+				str.style.font = "arial narrow";
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<h1 class="classA">标题1</h1>
+		<h2>标题2 <small>副标题</small></h2>
+		<h3>标题3<small>副标题3</small></h3>
+		<h4>我是标题6 h6. <small>我是副标题6 h6</small></h4>
+		<p id="para1">这个段落用id方式</p>
+		<p class="center">这个段落用class方式</p>
+		<h3 class="centerA">这是一个标题</h3>
+		<p class="centerA">这种情况下定义的风格只有标签p才可以使用, 此例中h3没有效果</p>
+		<p class="uppercase"> this is a html</p>
+		<p class="lowercase">this is a html</p>
+		<p class="capitalize">this is a html</p>
+		<p class="ex1"> 整体设置</p>
+		<p> an <img class="bottom" src="img/HBuilder.png" width="80" height="40" /> img</p>
+		<p> an <img class="top" src="img/HBuilder.png" width="80" height="40" /> img</p>
+		<p>
+			<ul>
+				<li>a:link - 正常，未访问过的链接</li>
+				<li>a:visited - 用户已访问过的链接</li>
+				<li>a:hover - 当用户鼠标放在链接上时</li>
+				<li>a:active - 链接被点击的那一刻</li>
+			</ul>
+		</p>
+		<p>
+			<a href="https://www.baidu.com">这是一个百度链接</a>
+		</p>
+		<div>
+			<ul>
+				<li>
+					<a href="http://www.baidu.com">bmw</a>
+				</li>
+				<li>
+					<a href="img/Hbu.png">audi</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<img src="img/Hbu.png" width="20" height="20" />
+			<img src="img/HBuilder.png" width="20" height="20" />
+		</div>
+		<div class="dropdown">
+			<span>鼠标移动到这</span>
+			<div class="dropdown-content">
+				<p>下拉菜单</p>
+			</div>
+		</div>
+		
+		<div class="down">
+			<button class="dropbtn">下拉菜单</button>
+			<div class="down-content">
+				<a href="http://www.runoob.com">菜鸟教程 1</a>
+				<a href="http://www.runoob.com">菜鸟教程 2</a>
+				<a href="http://www.runoob.com">菜鸟教程 3</a>
+			</div>
+			<br /><br /><br />
+		</div>
+		
+		
+		<div class="scroll">
+			<p>this is a English, this is a Chinese,this is a English, this is a Chinese,this is a English, this is a Chinese,this is a English, this is a Chinese,this is a English, this is a Chinese,</p>
+		</div>
+		<br><br/>
+		<div class="hidden">
+			<p>this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,this is a Chinese,</p>
+		</div>
+		<div>
+			<span class="auto">auto</span><br />
+			<span style="cursor: crosshair;">crosshair</span><br />
+			<span style="cursor: default;">default</span><br />
+			<span style="cursor: e-resize;">e-resize</span><br />
+			<span style="cursor: help;">help</span><br />
+			<span style="cursor: move;">move</span><br />
+			<span style="cursor: n-resize;">n-resize</span><br />
+			<span style="cursor: ne-resize;">ne-resize</span><br />
+			<span style="cursor: nw-resize;">nw-resize</span><br />
+			<span style="cursor: pointer;">pointer</span><br />
+			<span style="cursor: progress;">progress</span><br />
+			<span style="cursor: s-resize;">s-resize</span><br />
+			<span style="cursor: se-resize;">se-resize</span><br>
+			<span style="cursor: sw-resize;">sw-resize</span><br />
+			<span style="cursor: text;">text</span><br />
+			<span style="cursor: w-resize;">w-resize</span><br />
+			<span style="cursor: wait;">wait</span>
+		</div>
+		<div>
+			<p>I am is <i>strong</i> man</p>
+			<p>I am is <q lang="no">strong</q> man</p>
+			<a class="one" href="img/Hbu.png">链接到一张图片</a><br />
+			<a class="two" href="index.html#para1">链接到某一个方法, 链接到~>这个段落用id方式</a><br />
+			<a class="three" href="https://www.baidu.com">链接到百度</a><br />
+			<a class="four" href="lesson1.txt">链接到一篇txt文件</a><br />
+			<a class="five" href="test.css">链接到css</a>
+		</div>
+		<div>
+			<script type="text/javascript">
+				document.write("<p>这个段落是直接显示的</p>")
+			</script>
+		</div>
+
+		<div>
+			<p id="showDateDemo">这个地方将要显示日期</p><br />
+			<button type="button" onclick="showDate()">点击显示当前日期</button>
+			<button type="button" onclick="showString()">重置字符串</button>
+			<button type="button" onclick="changeStyle()">改变字符串属性</button>
+			<button type="button" onclick="alert('哈哈')">点我</button>
+			<button type="button" onclick="finishLesson()">再点我</button>
+			<button type="button" onclick="finishFun()">一点一下试试</button>
+			<button type="button" onclick="alert(myfun1(3, 4))">点击计算结果(带参数的js函数)</button>
+			<button type="button" onclick="alert(my1())">点击计算my1</button>
+			<button type="button" onclick="alert(my2())">冒泡排序</button>
+			<button type="button" onclick="alert(my3())">点击显示科比的信息</button>
+			<button type="button" onclick="alert(my4())">点击显示全局变量</button>
+			<p id="showGlobal">这将要显示js文件中的内容, 点击按钮调用my5()中的方法替换此字符串</p>
+			<button type="button" onclick="my5()">点击替换上面的字符串</button>
+			<p onmousedown="mouseChangeString(this, 'red')" onmouseup="mouseChangeString(this, 'green')"> 鼠标移动到下面按钮的事件 </p>
+			<button type="button" onclick="this.innerHTML = Date()">点击改变这个字符串</button>
+			<button type="button" onmouseover="this.innerHTML =my3()" onmouseout="this.innerHTML = '移动鼠标改变字符串'">移动鼠标改变字符串</button>
+		</div>
+		<div>
+			<script type="text/javascript">
+				window.alert("这是直接显示的输出内容");
+			</script>
+			<p id="demo1">这是一个段落</p>
+			<script type="text/javascript">
+				//  分别测试三种不同写法
+				document.getElementById("demo1").innerHTML = "这是一个已经修改的段落";
+				document.getElementById("demo1").innerHTML = 123e7;
+				document.getElementById("demo1").innerHTML = '这是一个....';
+			</script>
+			<p id="demo2" ">这是第二个段落</p>
+	<script type="text/javascript ">
+		document.write("这是另一个段落 ");
+	</script>
+	<script type="text/javascript ">
+		a = 554354;
+		b = 64543;
+		c= a + b;
+		console.log(c);
+	</script>
+	<div>
+		<p id = "demo_p "></p>
+		<p id = "demo_pp "></p>
+		<p id = "demo_ppp "></p>
+		<p id = "demo_pppp "></p>
+		<p id = "getTime "></p>
+		<script type="text/javascript ">
+		my110();
+		// globalNum 是一个全局变量
+		// globalNum 当做字符串处理
+		document.getElementById("demo_p ").innerHTML = "MJ是 " + globalNum + "号; ";
+		// globalNum 当做数字处理
+		document.getElementById("demo_pp ").innerHTML = my111() + 100;
+		document.getElementById("demo_ppp ").innerHTML ="输出一个类型: " + typeof "33 ";
+		document.getElementById("demo_pppp ").innerHTML ="输出一个构造函数类型: " + "dd ".constructor;
+		document.getElementById("getTime ").innerHTML = my1130();
+			function my110 () {
+				globalNum = 23;
+			}
+			function my111 () {
+				//globalNum = 24;
+				return globalNum;
+			}
+			function my1130 () {
+				d = new Date();
+				Number(d);
+				return d;
+			}
+			
+		</script>
+		<p>"We are the so-called "Vikings" from the north. "</p>
+	</div>
+	
+	<div>
+		<p id = "getPerson "></p>
+		<p id = "json "></p>
+		<script type="text/javascript ">
+		jsonFun();
+		document.getElementById("getPerson ").innerHTML = getPerson();
+		function getPerson() {
+				var person1 = ["joe ", "jack "];
+				var person2 = {name:"abner ", sex:"man "};
+				return person2.name + "<br>" + person2["sex"] + "<br>" + person1[0]; } function jsonFun () { var text = '{"employees":[' + '{"firstName":"John","lastName":"Doe" },' + '{"firstName":"Anna","lastName":"Smith" },' + '{"firstName":"Peter","lastName":"Jones" }]}'; obj = JSON.parse(text); document.getElementById("json").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName; }
+
+				</script>
+
+		</div>
+		</div>
+		<div>
+			<small>本行内容是在标签内</small><br>
+			<strong>本行内容是在标签内</strong><br>
+			<em>本行内容是在 <em> 标签内，并呈现为斜体</em><br>
+			<p class="text-left">向左对齐文本</p>
+			<p class="text-center">居中对齐文本</p>
+			<p class="text-right">向右对齐文本</p>
+			<p class="text-muted">本行内容是减弱的</p>
+			<p class="text-primary">本行内容带有一个 primary class</p>
+			<p class="text-success">本行内容带有一个 success class</p>
+			<p class="text-info">本行内容带有一个 info class</p>
+			<p class="text-warning">本行内容带有一个 warning class</p>
+			<p class="text-danger">本行内容带有一个 danger class</p>
+			<pre> &lt;article&gt;
+      &lt;h1&gt;Article Heading&lt;/h1&gt;
+   &lt;/article&gt;
+			</pre>
+		</div>
+		
+		<div>
+			<table class="table">
+			<caption class="text-center">表格布局</caption>
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>城市</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>1. </td>
+						<td>北京</td>
+					</tr>
+					<tr>
+						<td>2. </td>
+						<td>上海</td>
+					</tr>
+				</tbody>
+			</thead>
+			</table>
+		</div>
+		
+		<div>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+		<div id="aaa">
+			<p> 在CSS文件里书写时，ID加前缀"#", id一个页面只可以使用一次, ID是一个标签，用于区分不同的结构和内容，就象名字，如果一个屋子有2个人同名，就会出现混淆, 从概念上说就是不一样的：id是先找到结构/内容，再给它定义样式 </p>
+		</div>
+		<div class="bbb">
+			<p>在CSS文件里书写时，CLASS用".", class可以多次引用, class是一个样式，可以套在任何结构和内容上，就象一件衣服, class是先定义好一种样式，再套给多个结构/内容</p>
+		</div>
+		
+	</body>
+
+</html>
+
+<!--
+这里是最终敲完的正确代码，可用于比对
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<script src="test.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function WhoisE () {
+				var e;
+				e = document.getElementsByClassName("classA");
+				e = document.getElementsByTagName("div");
+				e = document.getElementById("d1");
+				e.setAttribute("align","center");
+				e.setAttribute("data-test","2");
+				e.style.fontFamily="微软雅黑";
+				e.style.backgroundImage="url(img/HBuilder.png)";
+				e.style.cssText="background-image: url(img/HBuilder.png);";
+				switch (e.style.display){
+					case "-webkit-box":
+						break;
+					default:
+						break;
+				}
+				if (e.getAttribute("class")!="classA") {
+					e.className="classA";
+				}
+				e.innerHTML="<font color='#CCCCCC'></font>";
+				e = document.getElementById("a1");
+				e.href="#a1";
+				e.target="_blank";
+				e = new Image();
+				e.src="img/HBuilder.png";
+				e = window.indexedDB || window.webkitIndexedDB || window.msIndexedDB || window.mozIndexedDB;
+				if (typeof(e)!="undefined") {
+					e.open("test");
+				}
+				var head = document.getElementsByTagName("head")[0];
+				with (head){
+					var l = lastElementChild;
+					removeChild(l);
+				}
+				e = document.createElement("link");
+				e.rel="stylesheet";
+				e.type="text/css";
+				e.href="test.css";
+				head.appendChild(e);
+				var ss="e is ";
+				if (e.getAttribute("data-test")==null) {
+					ss=ss+e.outerHTML;
+				} else{
+					ss=ss+"unknow";
+				}
+				alert(ss)
+			}
+			addEventListener("DOMContentLoaded",function () {
+				finishLesson(1)
+			})
+		</script>
+		<style type="text/css">
+			body{
+				text-align: center;
+				-webkit-user-select: none;
+			}
+			input[type=button]{
+				width: 90px;
+			}
+			ul{display: none}
+			#d1{
+				font-family: "微软雅黑";
+				background-image: url(img/HBuilder.png)
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="test.css"/>
+	</head>
+	<body>
+		<img src="img/HBuilder.png"/>
+		<br />
+		<div id="d1" class="classA" data-test = "1"></div>
+		<a href="#a1" id="a1"></a>
+		<ul>
+			<li></li>
+		</ul>
+		<nav>&nbsp;</nav>
+		<input type="button" name="" id="" value="who is e" onclick="WhoisE()" />
+	</body>
+</html>
+-->
